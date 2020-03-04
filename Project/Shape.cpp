@@ -5,7 +5,7 @@ Shape::Shape(int vol)
     volume = vol;
 }
 
-int Shape::getVol()
+int Shape::getVol() const
 {
     return volume;
 }

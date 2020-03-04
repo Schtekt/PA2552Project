@@ -15,3 +15,5 @@ Project/Project/
 *.user
 
 .vs/
+
+x64/

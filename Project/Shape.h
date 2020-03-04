@@ -7,7 +7,7 @@ private:
     int volume;
 public:
     Shape(int vol = 1);
-    int getVol();
+    int getVol() const;
 };
 
 #endif
