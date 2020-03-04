@@ -1,11 +1,11 @@
 #include "Shape.h"
 
-Shape::Shape(int vol)
+Shape::Shape(int ar)
 {
-    volume = vol;
+    area = ar;
 }
 
-int Shape::getVol() const
+int Shape::GetArea() const
 {
-    return volume;
+    return area;
 }

@@ -17,3 +17,25 @@ Project/Project/
 .vs/
 
 x64/
+
+*.tlog
+
+*.obj
+
+*.log
+
+*.pch
+
+*.idb
+
+*.pdb
+
+*.exe
+
+*.ilk
+
+*.dll
+
+*.exp
+
+*.lib

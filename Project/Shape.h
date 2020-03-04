@@ -4,10 +4,10 @@
 class Shape
 {
 private:
-    int volume;
+    int area;
 public:
-    Shape(int vol = 1);
-    int getVol() const;
+    Shape(int ar = 1);
+    int GetArea() const;
 };
 
 #endif
