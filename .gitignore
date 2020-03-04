@@ -6,3 +6,13 @@ Project/Debug/
 Project/Project/
 
 Project/makefile
+
+*.sln
+
+*.vcxproj
+
+*.filters
+
+*.user
+
+.vs/
