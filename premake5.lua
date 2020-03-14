@@ -20,16 +20,28 @@ workspace "PA2252Project"
     project "Project"
         kind "staticLib"
         files {"lib/**.c", "lib/**.h", "lib/**.cpp", "lib/**.hpp"}
+        vpaths {
+            ["Headers/"] = { "lib/**.h", "lib/**.hpp" },
+            ["Sources/"] = {"lib/**.c", "lib/**.cpp"}
+        }
         staticruntime "On"
 
     project "ProjectTestRuntime"
         kind "ConsoleApp"
         files {"runtimeTest/**.c", "runtimeTest/**.h", "runtimeTest/**.cpp", "runtimeTest/**.hpp"}
+        vpaths {
+            ["Headers/"] = { "runtimeTest/**.h", "runtimeTest/**.hpp" },
+            ["Sources/"] = {"runtimeTest/**.c", "runtimeTest/**.cpp"}
+        }
         links {"Project", "GoogleTest"}
         includedirs{"lib/pub", "googletest/googletest/include"}
 
     project "ProjectRuntime"
         kind "ConsoleApp"
         files {"runtime/**.c", "runtime/**.h", "runtime/**.cpp", "runtime/**.hpp"}
+        vpaths {
+            ["Headers/"] = { "runtime/**.h", "runtime/**.hpp" },
+            ["Sources/"] = {"runtime/**.c", "runtime/**.cpp"}
+        }
         links {"Project"}
         includedirs{"lib/pub"}
