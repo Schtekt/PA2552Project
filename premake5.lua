@@ -1,4 +1,5 @@
-workspace "PA2252Project"
+solution "PA2252Project"
+    platforms {"x86", "x64"}
     configurations {"Debug","Release"}
     language "C++"
     targetdir "bin/%{cfg.buildcfg}"
@@ -34,7 +35,7 @@ workspace "PA2252Project"
             ["Sources/"] = {"runtimeTest/**.c", "runtimeTest/**.cpp"}
         }
         links {"Project", "GoogleTest"}
-        includedirs{"lib/pub", "googletest/googletest/include"}
+        includedirs{"lib", "googletest/googletest/include"}
 
     project "ProjectRuntime"
         kind "ConsoleApp"
@@ -44,4 +45,4 @@ workspace "PA2252Project"
             ["Sources/"] = {"runtime/**.c", "runtime/**.cpp"}
         }
         links {"Project"}
-        includedirs{"lib/pub"}
+        includedirs{"lib"}

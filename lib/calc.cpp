@@ -1,4 +1,4 @@
-#include "pub/Calc.h"
+#include "Calc.h"
 
 Calc::Calc(): m_currVal(0)
 {
