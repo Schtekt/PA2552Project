@@ -8,6 +8,9 @@ private:
 public:
 	Calc();
 	float addition(float valOne, float valTwo);
+	float subtraction(float valOne, float valTwo);
+	float multiplication(float valOne, float valTwo);
+	float division(float valOne, float valTwo);
 	float GetVal() const;
 };
 
