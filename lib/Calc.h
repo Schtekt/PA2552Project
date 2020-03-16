@@ -4,7 +4,7 @@
 class Calc
 {
 private:
-	int m_currVal;
+	float m_currVal;
 public:
 	Calc();
 	float addition(float valOne, float valTwo);
