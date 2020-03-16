@@ -10,28 +10,28 @@ TEST(CalcTest, CalcInitZero)
 TEST(CalcTest, CalcAddition)
 {
 	Calc calc;
-	calc.addition(2,3);
+	calc.Addition(2,3);
 	EXPECT_EQ(5, calc.GetVal());
 }
 
 TEST(CalcTest, CalcSubtration)
 {
 	Calc calc;
-	calc.subtraction(10, 6);
+	calc.Subtraction(10, 6);
 	EXPECT_EQ(4, calc.GetVal());
 }
 
 TEST(CalcTest, CalcMultiplication)
 {
 	Calc calc;
-	calc.multiplication(5, 3);
+	calc.Multiplication(5, 3);
 	EXPECT_EQ(15, calc.GetVal());
 }
 
 TEST(CalcTest, CalcDivision)
 {
 	Calc calc;
-	calc.division(8, 2);
+	calc.Division(8, 2);
 	EXPECT_EQ(4, calc.GetVal());
 }
 

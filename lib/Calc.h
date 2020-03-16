@@ -7,10 +7,10 @@ private:
 	float m_currVal;
 public:
 	Calc();
-	float addition(float valOne, float valTwo);
-	float subtraction(float valOne, float valTwo);
-	float multiplication(float valOne, float valTwo);
-	float division(float valOne, float valTwo);
+	float Addition(float valOne, float valTwo);
+	float Subtraction(float valOne, float valTwo);
+	float Multiplication(float valOne, float valTwo);
+	float Division(float valOne, float valTwo);
 	float GetVal() const;
 };
 

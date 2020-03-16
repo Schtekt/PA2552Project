@@ -1,0 +1,47 @@
+This document gives suggestions in what manner the c++ code should be written for this project.
+It may be updated at any time of the running project and should in no way be seen as rulings, mere suggestions
+to keep the code consistent.
+
+Classes:
+	* Each class should be contained within a .h file and a .cpp file whenever possible.
+	
+	* Each .h file should be enclosed within #ifndef, #define and #endif. See example below.
+		// for a class foo in foo.h
+		#ifndef FOO_H
+		#define FOO_H
+	
+		class foo
+		{
+			// declarations and stuff...
+		}
+		#endif
+
+	* Each private member variable should start their names with "m_" to note that they are members.
+	  See example below.
+		// for a member variable size in class foo
+
+		#ifndef FOO_H
+		#define FOO_H
+	
+		class foo
+		{
+			private:
+				int m_size;
+		}
+		#endif
+
+	* All names of variables and functions should be camelcased. Public functions of classes starting wtih a capital letter.
+	  See example below.
+		// for a class foo in foo.h
+		#ifndef FOO_H
+		#define FOO_H
+	
+		class foo
+		{
+			private:
+				int m_size;
+				int m_bigSize;
+			public:
+				int GetSize() const;
+		}
+		#endif	
