@@ -14,6 +14,27 @@ TEST(CalcTest, CalcAddition)
 	EXPECT_EQ(5, calc.GetVal());
 }
 
+TEST(CalcTest, CalcSubtration)
+{
+	Calc calc;
+	calc.subtraction(10, 6);
+	EXPECT_EQ(4, calc.GetVal());
+}
+
+TEST(CalcTest, CalcMultiplication)
+{
+	Calc calc;
+	calc.multiplication(5, 3);
+	EXPECT_EQ(15, calc.GetVal());
+}
+
+TEST(CalcTest, CalcDivision)
+{
+	Calc calc;
+	calc.division(8, 2);
+	EXPECT_EQ(4, calc.GetVal());
+}
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);
