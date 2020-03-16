@@ -7,7 +7,8 @@ private:
 	int m_currVal;
 public:
 	Calc();
-	int GetVal() const;
+	float addition(float valOne, float valTwo);
+	float GetVal() const;
 };
 
 #endif
