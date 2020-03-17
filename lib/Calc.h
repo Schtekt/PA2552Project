@@ -13,8 +13,10 @@ public:
 	float Multiplication(float valOne, float valTwo);
 	float Division(float valOne, float valTwo);
 	float GetVal() const;
-	float MemAdd() const;
+	float MemAdd();
 	float GetMem() const;
+	void Reset();
+	void MemReset();
 };
 
 #endif

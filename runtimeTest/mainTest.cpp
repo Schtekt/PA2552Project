@@ -7,6 +7,13 @@ TEST(CalcTest, CalcInitZero)
 	EXPECT_EQ(0, calc.GetVal());
 }
 
+TEST(CalcTest, CalcReset)
+{
+	Calc calc;
+	calc.Reset();
+	EXPECT_EQ(0, calc.GetVal());
+}
+
 TEST(OperandTestSuite, CalcAddition)
 {
 	Calc calc;
@@ -67,6 +74,25 @@ TEST(MemoryTestSuite, MemChanged)
 	calc.MemAdd();
 	EXPECT_NE(tmp, calc.GetMem());
 }
+
+TEST(MemoryTestsuite, MemIndependant)
+{
+	Calc calc;
+	float tmp = calc.Addition(5, 3);
+	calc.MemAdd();
+	calc.Reset();
+	EXPECT_EQ(tmp, calc.GetMem());
+}
+
+TEST(MemoryResetTestSuite, MemReset)
+{
+	Calc calc;
+	calc.Addition(5, 3);
+	calc.MemAdd();
+	calc.MemReset();
+	EXPECT_EQ(0, calc.GetMem());
+}
+
 
 int main(int argc, char** argv)
 {
