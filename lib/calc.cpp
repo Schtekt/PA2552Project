@@ -12,17 +12,20 @@ float Calc::Addition(float valOne, float valTwo)
 
 float Calc::Subtraction(float valOne, float valTwo)
 {
-	return 0.0f;
+	m_currVal = valOne - valTwo;
+	return m_currVal;
 }
 
 float Calc::Multiplication(float valOne, float valTwo)
 {
-	return 0.0f;
+	m_currVal = valOne * valTwo;
+	return m_currVal;
 }
 
 float Calc::Division(float valOne, float valTwo)
 {
-	return 0.0f;
+	m_currVal = valOne / valTwo;
+	return m_currVal;
 }
 
 float Calc::GetVal() const
@@ -32,18 +35,21 @@ float Calc::GetVal() const
 
 float Calc::MemAdd()
 {
-	return 0.0f;
+	m_memorized = m_currVal;
+	return m_memorized;
 }
 
 float Calc::GetMem() const
 {
-	return 0.0f;
+	return m_memorized;
 }
 
 void Calc::Reset()
 {
+	m_currVal = 0;
 }
 
 void Calc::MemReset()
 {
+	m_memorized = 0;
 }
