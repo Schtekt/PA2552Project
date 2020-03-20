@@ -28,6 +28,17 @@ float Calc::Division(float valOne, float valTwo)
 	return m_currVal;
 }
 
+float Calc::Factorial(float val)
+{
+	float result = 1;
+	for (int i = 1; i <= val; i++)
+	{
+		result = result * i;
+	}
+	m_currVal = result;
+	return m_currVal;
+}
+
 float Calc::GetVal() const
 {
 	return m_currVal;
