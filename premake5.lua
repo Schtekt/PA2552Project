@@ -1,8 +1,19 @@
+-- courtesy of "https://github.com/premake/premake-core/issues/935#issuecomment-343491487"
+function os.winSdkVersion()
+    local reg_arch = iif( os.is64bit(), "\\Wow6432Node\\", "\\" )
+    local sdk_version = os.getWindowsRegistry( "HKLM:SOFTWARE" .. reg_arch .."Microsoft\\Microsoft SDKs\\Windows\\v10.0\\ProductVersion" )
+    if sdk_version ~= nil then return sdk_version end
+end
+
+
 solution "PA2252Project"
     platforms {"x86", "x64"}
     configurations {"Debug","Release"}
     language "C++"
     targetdir "bin/%{cfg.buildcfg}"
+
+    filter {"system:windows", "action:vs*"}
+        systemversion(os.winSdkVersion() .. ".0")
 
     cppdialect "C++17"
     filter "configurations:Debug"
