@@ -12,6 +12,7 @@ public:
 	float Subtraction(float valOne, float valTwo);
 	float Multiplication(float valOne, float valTwo);
 	float Division(float valOne, float valTwo);
+	float Factorial(float val);
 	float GetVal() const;
 	float MemAdd();
 	float GetMem() const;

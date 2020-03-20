@@ -42,6 +42,13 @@ TEST(OperandTestSuite, CalcDivision)
 	EXPECT_EQ(4, calc.GetVal());
 }
 
+TEST(OperandTestSuite, CalcFactorial)
+{
+	Calc calc;
+	calc.Factorial(6);
+	EXPECT_EQ(720, calc.GetVal());
+}
+
 TEST(MemoryTestSuite, MemorizeAfterAdd)
 {
 	Calc calc;
