@@ -30,12 +30,12 @@ float Calc::Division(float valOne, float valTwo)
 
 float Calc::Factorial(float val)
 {
-	float result = 1;
+	float totalVal = 1;
 	for (int i = 1; i <= val; i++)
 	{
-		result = result * i;
+		totalVal = totalVal * i;
 	}
-	m_currVal = result;
+	m_currVal = totalVal;
 	return m_currVal;
 }
 
