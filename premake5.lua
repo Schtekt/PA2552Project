@@ -14,6 +14,9 @@ solution "PA2252Project"
         defines {"NDEBUG"}
         optimize "On"
 
+    filter "system:Windows"
+        systemversion "latest"
+        
     project "GoogleTest"
         kind "StaticLib"
         files { "googletest/googletest/src/gtest-all.cc" }
