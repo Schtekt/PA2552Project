@@ -39,6 +39,13 @@ float Calc::Factorial(float val)
 	return m_currVal;
 }
 
+float Calc::Modulus(int val, int mod)
+{
+	int result = (mod + (val % mod)) % mod;
+	m_currVal = result;
+	return m_currVal;
+}
+
 float Calc::GetVal() const
 {
 	return m_currVal;

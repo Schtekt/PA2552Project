@@ -13,6 +13,7 @@ public:
 	float Multiplication(float valOne, float valTwo);
 	float Division(float valOne, float valTwo);
 	float Factorial(float val);
+	float Modulus(int val, int mod);
 	float GetVal() const;
 	float MemAdd();
 	float GetMem() const;

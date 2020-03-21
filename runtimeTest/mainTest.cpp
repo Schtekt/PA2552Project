@@ -49,6 +49,20 @@ TEST(OperandTestSuite, CalcFactorial)
 	EXPECT_EQ(720, calc.GetVal());
 }
 
+TEST(OperandTestSuite, CalcModulus)
+{
+	Calc calc;
+	calc.Modulus(5, 3);
+	EXPECT_EQ(2, calc.GetVal());
+}
+
+TEST(OperandTestSuite, CalcModulusNegative)
+{
+	Calc calc;
+	calc.Modulus(-8, 5);
+	EXPECT_EQ(2, calc.GetVal());
+}
+
 TEST(MemoryTestSuite, MemorizeAfterAdd)
 {
 	Calc calc;
