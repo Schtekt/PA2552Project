@@ -1,4 +1,3 @@
--- courtesy of "https://github.com/premake/premake-core/issues/935#issuecomment-343491487"
 solution "PA2252Project"
     platforms {"x86", "x64"}
     configurations {"Debug","Release"}
@@ -29,7 +28,6 @@ solution "PA2252Project"
             ["Headers/"] = { "lib/**.h", "lib/**.hpp" },
             ["Sources/"] = {"lib/**.c", "lib/**.cpp"}
         }
-        staticruntime "On"
 
     project "ProjectTestRuntime"
         kind "ConsoleApp"
