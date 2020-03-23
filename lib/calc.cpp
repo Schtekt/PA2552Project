@@ -6,7 +6,7 @@ Calc::Calc(): m_currVal(0)
 
 float Calc::Addition(float valOne, float valTwo)
 {
-	m_currVal = valOne + valTwo + 6;
+	m_currVal = valOne + valTwo;
 	return m_currVal;
 }
 
@@ -19,7 +19,7 @@ float Calc::Subtraction(float valOne, float valTwo)
 float Calc::Multiplication(float valOne, float valTwo)
 {
 	m_currVal = valOne * valTwo;
-	return m_currVal;
+	return m_currVal;	
 }
 
 float Calc::Division(float valOne, float valTwo)
