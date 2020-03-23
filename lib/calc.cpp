@@ -44,6 +44,7 @@ float Calc::Modulus(float var[])
 	int result = ((int)var[1] + ((int)var[0] % (int)var[1])) % (int)var[1];
 	m_currVal = result;
 	return m_currVal;
+<<<<<<< Updated upstream
 }
 
 float Calc::Negative(float var[])
@@ -77,3 +78,37 @@ void Calc::MemReset()
 {
 	m_memorized = 0;
 }
+=======
+}
+
+float Calc::GetVal() const
+{
+	return m_currVal;
+}
+
+float Calc::MemAdd()
+{
+	m_memorized = m_currVal;
+	return m_memorized;
+}
+
+float Calc::GetMem() const
+{
+	return m_memorized;
+}
+
+void Calc::Reset()
+{
+	m_currVal = 0;
+}
+
+void Calc::MemReset()
+{
+	m_memorized = 0;
+}
+
+float Calc::Sqroot(float val)
+{
+	return 0.0f;
+}
+>>>>>>> Stashed changes

@@ -130,6 +130,12 @@ TEST(MemoryResetTestSuite, MemReset)
 	calc.MemReset();
 	EXPECT_EQ(0, calc.GetMem());
 }
+TEST(MemoryTestSuite, FindingSqroot)
+{
+	Calc Obj;
+	float temp = Obj.Sqroot(49);
+	EXPECT_EQ(temp, 7);
+}
 
 TEST(NegativeOperandTestSuite, BasicTest)
 {

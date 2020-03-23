@@ -20,6 +20,7 @@ public:
 	float GetMem() const;
 	void Reset();
 	void MemReset();
+	float Sqroot(float val);
 };
 
 #endif
