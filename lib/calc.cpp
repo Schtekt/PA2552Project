@@ -4,34 +4,34 @@ Calc::Calc(): m_currVal(0)
 {
 }
 
-float Calc::Addition(float valOne, float valTwo)
+float Calc::Addition(float var[])
 {
-	m_currVal = valOne + valTwo;
+	m_currVal = var[0] + var[1];
 	return m_currVal;
 }
 
-float Calc::Subtraction(float valOne, float valTwo)
+float Calc::Subtraction(float var[])
 {
-	m_currVal = valOne - valTwo;
+	m_currVal = var[0] - var[1];
 	return m_currVal;
 }
 
-float Calc::Multiplication(float valOne, float valTwo)
+float Calc::Multiplication(float var[])
 {
-	m_currVal = valOne * valTwo;
+	m_currVal = var[0] * var[1];
 	return m_currVal;
 }
 
-float Calc::Division(float valOne, float valTwo)
+float Calc::Division(float var[])
 {
-	m_currVal = valOne / valTwo;
+	m_currVal = var[0] / var[1];
 	return m_currVal;
 }
 
-float Calc::Factorial(float val)
+float Calc::Factorial(float var[])
 {
 	float totalVal = 1;
-	for (int i = 1; i <= val; i++)
+	for (int i = 1; i <= var[0]; i++)
 	{
 		totalVal = totalVal * i;
 	}
@@ -39,16 +39,16 @@ float Calc::Factorial(float val)
 	return m_currVal;
 }
 
-float Calc::Modulus(int val, int mod)
+float Calc::Modulus(float var[])
 {
-	int result = (mod + (val % mod)) % mod;
+	int result = ((int)var[1] + ((int)var[0] % (int)var[1])) % (int)var[1];
 	m_currVal = result;
 	return m_currVal;
 }
 
-float Calc::Negative(float val)
+float Calc::Negative(float var[])
 {
-	m_currVal = -val;
+	m_currVal = -var[0];
 	return m_currVal;
 }
 

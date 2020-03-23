@@ -8,13 +8,13 @@ private:
 	float m_memorized;
 public:
 	Calc();
-	float Addition(float valOne, float valTwo);
-	float Subtraction(float valOne, float valTwo);
-	float Multiplication(float valOne, float valTwo);
-	float Division(float valOne, float valTwo);
-	float Factorial(float val);
-	float Modulus(int val, int mod);
-	float Negative(float val);
+	float Negative(float var[]);
+	float Modulus(float var[]); //arg[0] mod arg[1]
+	float Factorial(float var[]); //!arg[0]
+	float Division(float var[]); //arg[0] / arg[1]
+	float Multiplication(float var[]); //arg[0] * arg[1]
+	float Subtraction(float var[]); //arg[0] - arg[1]
+	float Addition(float var[]); //arg[0] + arg[1]
 	float GetVal() const;
 	float MemAdd();
 	float GetMem() const;

@@ -17,81 +17,96 @@ TEST(CalcTest, CalcReset)
 TEST(OperandTestSuite, CalcAddition)
 {
 	Calc calc;
-	calc.Addition(2,3);
+	float val[] = {2, 3};
+	calc.Addition(val);
 	EXPECT_EQ(5, calc.GetVal());
 }
 
 TEST(OperandTestSuite, CalcSubtration)
 {
 	Calc calc;
-	calc.Subtraction(10, 6);
+	float val[] = { 10, 6 };
+	calc.Subtraction(val);
 	EXPECT_EQ(4, calc.GetVal());
 }
 
 TEST(OperandTestSuite, CalcMultiplication)
 {
 	Calc calc;
-	calc.Multiplication(5, 3);
+	float val[] = { 5, 3 };
+	calc.Multiplication(val);
 	EXPECT_EQ(15, calc.GetVal());
 }
 
 TEST(OperandTestSuite, CalcDivision)
 {
 	Calc calc;
-	calc.Division(8, 2);
+	float val[] = { 8, 2 };
+	calc.Division(val);
 	EXPECT_EQ(4, calc.GetVal());
 }
 
 TEST(OperandTestSuite, CalcFactorial)
 {
 	Calc calc;
-	calc.Factorial(6);
+	float val[] = { 6 };
+	calc.Factorial(val);
 	EXPECT_EQ(720, calc.GetVal());
 }
 
 TEST(OperandTestSuite, CalcModulus)
 {
 	Calc calc;
-	calc.Modulus(5, 3);
+	float val[] = { 5, 3 };
+	calc.Modulus(val);
 	EXPECT_EQ(2, calc.GetVal());
 }
 
 TEST(OperandTestSuite, CalcModulusNegative)
 {
 	Calc calc;
-	calc.Modulus(-8, 5);
+	float val[] = { -8, 5 };
+	calc.Modulus(val);
 	EXPECT_EQ(2, calc.GetVal());
 }
 
 TEST(MemoryTestSuite, MemorizeAfterAdd)
 {
 	Calc calc;
-	calc.Addition(1, 2);
+	float val[] = { 1, 2 };
+	calc.Addition(val);
 	EXPECT_EQ(3, calc.MemAdd());
 }
 
 TEST(MemoryTestSuite, MemorizeAfterSub)
 {
 	Calc calc;
-	calc.Subtraction(100.5, 50);
+	float val[] = { 100.5, 50 };
+	calc.Subtraction(val);
 	EXPECT_EQ(50.5, calc.MemAdd());
 }
 
 TEST(MemoryTestSuite, MemNChanged)
 {
 	Calc calc;
-	float tmp = calc.Multiplication(5, 5);
+	float val[] = { 5, 5 };
+	float tmp = calc.Multiplication(val);
 	calc.MemAdd();
-	calc.Multiplication(calc.GetVal(), 6);
+	val[0] = calc.GetVal();
+	val[1] = 6;
+	calc.Multiplication(val);
 	EXPECT_EQ(tmp, calc.GetMem());
 }
 
 TEST(MemoryTestSuite, MemChanged)
 {
 	Calc calc;
-	float tmp = calc.Division(5, 5);
+	float val[] = { 5, 5 };
+	float tmp = calc.Division(val);
 	calc.MemAdd();
-	calc.Division(calc.GetVal(), 6);
+	val[0] = calc.GetVal();
+	val[1] = 6;
+	calc.Division(val);
 	calc.MemAdd();
 	EXPECT_NE(tmp, calc.GetMem());
 }
@@ -99,7 +114,8 @@ TEST(MemoryTestSuite, MemChanged)
 TEST(MemoryTestsuite, MemIndependant)
 {
 	Calc calc;
-	float tmp = calc.Addition(5, 3);
+	float val[] = { 5, 3 };
+	float tmp = calc.Addition(val);
 	calc.MemAdd();
 	calc.Reset();
 	EXPECT_EQ(tmp, calc.GetMem());
@@ -108,7 +124,8 @@ TEST(MemoryTestsuite, MemIndependant)
 TEST(MemoryResetTestSuite, MemReset)
 {
 	Calc calc;
-	calc.Addition(5, 3);
+	float val[] = { 5, 3 };
+	calc.Addition(val);
 	calc.MemAdd();
 	calc.MemReset();
 	EXPECT_EQ(0, calc.GetMem());
@@ -117,7 +134,8 @@ TEST(MemoryResetTestSuite, MemReset)
 TEST(NegativeOperandTestSuite, BasicTest)
 {
 	Calc calc;
-	float res = calc.Negative(5);
+	float val[] = { 5 };
+	float res = calc.Negative(val);
 	EXPECT_EQ(-5, res);
 }
 
