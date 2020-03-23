@@ -7,7 +7,7 @@ Calc::Calc(): m_currVal(0)
 float Calc::Addition(float valOne, float valTwo)
 {
 	m_currVal = valOne + valTwo;
-	return m_currVal;
+	return 0;
 }
 
 float Calc::Subtraction(float valOne, float valTwo)
