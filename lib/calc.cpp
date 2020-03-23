@@ -10,6 +10,11 @@ float Calc::Addition(float var[])
 	return m_currVal;
 }
 
+float Calc::Power(float var[])
+{
+	return 0.0f;
+}
+
 float Calc::Subtraction(float var[])
 {
 	m_currVal = var[0] - var[1];

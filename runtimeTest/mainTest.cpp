@@ -70,6 +70,15 @@ TEST(OperandTestSuite, CalcModulusNegative)
 	EXPECT_EQ(2, calc.GetVal());
 }
 
+TEST(OperandTestSuite, CalcPower)
+{
+	Calc calc;
+	float val[] = { 2, 4 };
+	calc.Power(val);
+	EXPECT_EQ(16, calc.GetVal());
+}
+
+
 TEST(MemoryTestSuite, MemorizeAfterAdd)
 {
 	Calc calc;
