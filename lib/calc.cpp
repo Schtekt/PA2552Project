@@ -12,7 +12,8 @@ float Calc::Addition(float var[])
 
 float Calc::Power(float var[])
 {
-	return 0.0f;
+	m_currVal = pow(var[0], var[1]);
+	return m_currVal;
 }
 
 float Calc::Subtraction(float var[])

@@ -1,6 +1,8 @@
 #ifndef CALC_H
 #define CALC_H
 
+#include <math.h>
+
 class Calc
 {
 private:
