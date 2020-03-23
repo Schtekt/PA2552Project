@@ -46,6 +46,12 @@ float Calc::Modulus(int val, int mod)
 	return m_currVal;
 }
 
+float Calc::Negative(float val)
+{
+	m_currVal = -val;
+	return m_currVal;
+}
+
 float Calc::GetVal() const
 {
 	return m_currVal;
