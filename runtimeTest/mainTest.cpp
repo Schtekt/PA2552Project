@@ -114,6 +114,12 @@ TEST(MemoryResetTestSuite, MemReset)
 	EXPECT_EQ(0, calc.GetMem());
 }
 
+TEST(NegativeOperandTestSuite, BasicTest)
+{
+	Calc calc;
+	float res = calc.Negative(5);
+	EXPECT_EQ(-5, res);
+}
 
 int main(int argc, char** argv)
 {
